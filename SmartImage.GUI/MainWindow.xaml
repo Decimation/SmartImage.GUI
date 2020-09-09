@@ -7,6 +7,37 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TabControl>
+            <TabItem x:Name="SearchTab" Header="Search">
+                <Grid Background="#FFE5E5E5">
+                    <Border Background="Gray" Margin="694,10,10,315">
+                        <StackPanel x:Name="SearchEnginesPanel">
+                            <Label Content="Label" />
+                            <CheckBox Content="CheckBox" />
+                            <CheckBox Content="CheckBox" />
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="SettingsTab" Header="Settings">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="InstallExe" Content="Install" HorizontalAlignment="Left" Margin="10,10,0,0"
+                            VerticalAlignment="Top" Width="97" Click="InstallExe_Click" />
+                    <Button x:Name="LocateExe" Content="Locate" HorizontalAlignment="Left" Margin="125,10,0,0"
+                            VerticalAlignment="Top" Width="74" Click="LocateExe_Click" />
+                    <TextBox x:Name="ExecutableLocation" HorizontalAlignment="Left" Margin="10,52,0,0"
+                             TextWrapping="Wrap" VerticalAlignment="Top" Width="352" IsReadOnly="True"
+                             TextChanged="ExecutableLocation_TextChanged" />
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="LogTab" Header="Log" HorizontalAlignment="Center" Height="20" VerticalAlignment="Center"
+                     Width="54">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="Log" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center"
+                             Width="774" Height="386" IsReadOnly="True" />
+                </Grid>
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>
